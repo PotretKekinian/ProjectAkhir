@@ -35,11 +35,11 @@
                           <Group type="102" attributes="0">
                               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="105" max="-2" attributes="0"/>
-                              <Component id="jToggleButton4" min="-2" pref="120" max="-2" attributes="0"/>
+                              <Component id="mmButton" min="-2" pref="120" max="-2" attributes="0"/>
                           </Group>
                           <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                              <Component id="jToggleButton5" min="-2" pref="120" max="-2" attributes="0"/>
-                              <Component id="jToggleButton3" alignment="0" min="-2" pref="119" max="-2" attributes="0"/>
+                              <Component id="mkButton" min="-2" pref="120" max="-2" attributes="0"/>
+                              <Component id="dtButton" alignment="0" min="-2" pref="119" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -54,11 +54,11 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
-              <Component id="jToggleButton4" min="-2" max="-2" attributes="0"/>
+              <Component id="mmButton" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jToggleButton5" min="-2" max="-2" attributes="0"/>
+              <Component id="mkButton" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jToggleButton3" min="-2" max="-2" attributes="0"/>
+              <Component id="dtButton" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
           </Group>
           <Group type="102" attributes="0">
@@ -72,17 +72,20 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLabel2">
     </Component>
-    <Component class="javax.swing.JToggleButton" name="jToggleButton3">
+    <Component class="javax.swing.JToggleButton" name="dtButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Data Transaksi"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JToggleButton" name="jToggleButton4">
+    <Component class="javax.swing.JToggleButton" name="mmButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Motor Masuk"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mmButtonActionPerformed"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JToggleButton" name="jToggleButton5">
+    <Component class="javax.swing.JToggleButton" name="mkButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Motor Keluar"/>
       </Properties>

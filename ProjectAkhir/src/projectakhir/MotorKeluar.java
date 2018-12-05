@@ -44,7 +44,7 @@ public class MotorKeluar extends javax.swing.JFrame {
         pilihanComboBox = new javax.swing.JComboBox<>();
         jLabel5 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        dataTable = new javax.swing.JTable();
+        datakeluarTable = new javax.swing.JTable();
         jLabel9 = new javax.swing.JLabel();
         kembaliButton = new javax.swing.JButton();
         editButton = new javax.swing.JButton();
@@ -91,7 +91,7 @@ public class MotorKeluar extends javax.swing.JFrame {
 
         jLabel5.setText("Jenis Transmisi");
 
-        dataTable.setModel(new javax.swing.table.DefaultTableModel(
+        datakeluarTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null},
@@ -110,7 +110,7 @@ public class MotorKeluar extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        jScrollPane2.setViewportView(dataTable);
+        jScrollPane2.setViewportView(datakeluarTable);
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel9.setText("Data Motor Keluar");
@@ -274,7 +274,7 @@ public class MotorKeluar extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton daftarButton;
-    private javax.swing.JTable dataTable;
+    private javax.swing.JTable datakeluarTable;
     private javax.swing.JButton editButton;
     private javax.swing.JTextField hargaField;
     private javax.swing.JLabel jLabel1;
