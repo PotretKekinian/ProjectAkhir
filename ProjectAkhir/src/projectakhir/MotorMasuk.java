@@ -89,6 +89,12 @@ public class MotorMasuk extends javax.swing.JFrame {
         });
 
         merkMMComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Honda", "Yamaha", "Kawasaki", "Suzuki" }));
+        merkMMComboBox.setSelectedIndex(-1);
+        merkMMComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                merkMMComboBoxActionPerformed(evt);
+            }
+        });
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel8.setText("Motor Masuk Showroom PotretKekinian");
@@ -149,15 +155,15 @@ public class MotorMasuk extends javax.swing.JFrame {
                     .addComponent(jLabel1))
                 .addGap(45, 45, 45)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(merkMMComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(hargaMMField, javax.swing.GroupLayout.DEFAULT_SIZE, 195, Short.MAX_VALUE)
                             .addComponent(tmMMField)
                             .addComponent(jtMMField)
                             .addComponent(warnaMMField)
                             .addComponent(nopolMMField)
-                            .addComponent(tipeMMField))
+                            .addComponent(tipeMMField)
+                            .addComponent(merkMMComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 570, Short.MAX_VALUE)
@@ -167,9 +173,9 @@ public class MotorMasuk extends javax.swing.JFrame {
                                 .addGap(0, 0, Short.MAX_VALUE)))
                         .addGap(29, 29, 29))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(daftarMMButton)
-                        .addGap(54, 54, 54)
-                        .addComponent(kembaliMMButton, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(daftarMMButton, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(kembaliMMButton, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))))
             .addGroup(layout.createSequentialGroup()
                 .addGap(225, 225, 225)
@@ -219,7 +225,7 @@ public class MotorMasuk extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(daftarMMButton)
                     .addComponent(kembaliMMButton))
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -250,6 +256,10 @@ public class MotorMasuk extends javax.swing.JFrame {
     private void warnaMMFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_warnaMMFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_warnaMMFieldActionPerformed
+
+    private void merkMMComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_merkMMComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_merkMMComboBoxActionPerformed
 
     /**
      * @param args the command line arguments
