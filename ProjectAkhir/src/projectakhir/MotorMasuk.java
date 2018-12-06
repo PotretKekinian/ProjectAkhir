@@ -47,7 +47,6 @@ public class MotorMasuk extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         datamasukTableMM = new javax.swing.JTable();
         kembaliMMButton = new javax.swing.JButton();
-        editMMButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -74,6 +73,12 @@ public class MotorMasuk extends javax.swing.JFrame {
         nopolMMField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nopolMMFieldActionPerformed(evt);
+            }
+        });
+
+        warnaMMField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                warnaMMFieldActionPerformed(evt);
             }
         });
 
@@ -128,8 +133,6 @@ public class MotorMasuk extends javax.swing.JFrame {
             }
         });
 
-        editMMButton.setText("Edit");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -165,9 +168,7 @@ public class MotorMasuk extends javax.swing.JFrame {
                         .addGap(29, 29, 29))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(daftarMMButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(editMMButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(54, 54, 54)
                         .addComponent(kembaliMMButton, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))))
             .addGroup(layout.createSequentialGroup()
@@ -217,7 +218,6 @@ public class MotorMasuk extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(daftarMMButton)
-                    .addComponent(editMMButton)
                     .addComponent(kembaliMMButton))
                 .addContainerGap(30, Short.MAX_VALUE))
         );
@@ -230,7 +230,9 @@ public class MotorMasuk extends javax.swing.JFrame {
     }//GEN-LAST:event_nopolMMFieldActionPerformed
 
     private void kembaliMMButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kembaliMMButtonActionPerformed
-        // TODO add your handling code here:
+        Data dt=new Data();
+        dt.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_kembaliMMButtonActionPerformed
 
     private void tipeMMFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tipeMMFieldActionPerformed
@@ -244,6 +246,10 @@ public class MotorMasuk extends javax.swing.JFrame {
     private void daftarMMButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_daftarMMButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_daftarMMButtonActionPerformed
+
+    private void warnaMMFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_warnaMMFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_warnaMMFieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -284,7 +290,6 @@ public class MotorMasuk extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton daftarMMButton;
     private javax.swing.JTable datamasukTableMM;
-    private javax.swing.JButton editMMButton;
     private javax.swing.JTextField hargaMMField;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

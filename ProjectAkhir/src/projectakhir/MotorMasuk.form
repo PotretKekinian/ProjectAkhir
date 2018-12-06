@@ -59,9 +59,7 @@
                   </Group>
                   <Group type="102" attributes="0">
                       <Component id="daftarMMButton" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="editMMButton" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
                       <Component id="kembaliMMButton" min="-2" pref="69" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
@@ -127,8 +125,7 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="daftarMMButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="editMMButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="kembaliMMButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="kembaliMMButton" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="30" max="32767" attributes="0"/>
           </Group>
@@ -182,6 +179,9 @@
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="warnaMMField">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="warnaMMFieldActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="jtMMField">
       <Events>
@@ -269,11 +269,6 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="kembaliMMButtonActionPerformed"/>
       </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="editMMButton">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Edit"/>
-      </Properties>
     </Component>
   </SubComponents>
 </Form>

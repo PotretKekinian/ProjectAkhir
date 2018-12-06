@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package projectakhir;
-
+import javax.swing.JOptionPane;
 /**
  *
  * @author sin
@@ -36,6 +36,11 @@ public class Data extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         dtbutton.setText("Data Transaksi");
+        dtbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dtbuttonActionPerformed(evt);
+            }
+        });
 
         mmbutton.setText("Motor Masuk");
         mmbutton.addActionListener(new java.awt.event.ActionListener() {
@@ -45,6 +50,11 @@ public class Data extends javax.swing.JFrame {
         });
 
         mkbutton.setText("Motor Keluar");
+        mkbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mkbuttonActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel1.setText("Data Showroom PotretKekinian");
@@ -92,8 +102,19 @@ public class Data extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void mmbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mmbuttonActionPerformed
-        // TODO add your handling code here:
+        MotorMasuk motor=new MotorMasuk();
+        motor.setVisible(true);
     }//GEN-LAST:event_mmbuttonActionPerformed
+
+    private void mkbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mkbuttonActionPerformed
+        MotorKeluar motor=new MotorKeluar();
+        motor.setVisible(true);
+    }//GEN-LAST:event_mkbuttonActionPerformed
+
+    private void dtbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dtbuttonActionPerformed
+        Transaksi ts=new Transaksi();
+        ts.setVisible(true);
+    }//GEN-LAST:event_dtbuttonActionPerformed
 
     /**
      * @param args the command line arguments

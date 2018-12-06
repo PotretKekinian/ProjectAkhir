@@ -47,7 +47,6 @@ public class MotorKeluar extends javax.swing.JFrame {
         datakeluarTableMK = new javax.swing.JTable();
         jLabel9 = new javax.swing.JLabel();
         kembaliMKButton = new javax.swing.JButton();
-        editMKButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -122,8 +121,6 @@ public class MotorKeluar extends javax.swing.JFrame {
             }
         });
 
-        editMKButton.setText("Edit");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -146,10 +143,9 @@ public class MotorKeluar extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(0, 9, Short.MAX_VALUE)
                         .addComponent(daftarMKButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(editMKButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(kembaliMKButton, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(39, 39, 39)
+                        .addComponent(kembaliMKButton, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(24, 24, 24))
                     .addComponent(nopolMKField)
                     .addComponent(warnaMKField)
                     .addGroup(layout.createSequentialGroup()
@@ -212,7 +208,6 @@ public class MotorKeluar extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(kembaliMKButton)
-                    .addComponent(editMKButton)
                     .addComponent(daftarMKButton))
                 .addGap(0, 38, Short.MAX_VALUE))
         );
@@ -225,7 +220,9 @@ public class MotorKeluar extends javax.swing.JFrame {
     }//GEN-LAST:event_nopolMKFieldActionPerformed
 
     private void kembaliMKButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kembaliMKButtonActionPerformed
-        // TODO add your handling code here:
+        Data dt=new Data();
+        dt.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_kembaliMKButtonActionPerformed
 
     private void merkMKComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_merkMKComboBoxActionPerformed
@@ -275,7 +272,6 @@ public class MotorKeluar extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton daftarMKButton;
     private javax.swing.JTable datakeluarTableMK;
-    private javax.swing.JButton editMKButton;
     private javax.swing.JTextField hargaMKField;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
