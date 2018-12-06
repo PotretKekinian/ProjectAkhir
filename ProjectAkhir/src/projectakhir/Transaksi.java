@@ -31,36 +31,36 @@ public class Transaksi extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        nopolField = new javax.swing.JTextField();
-        okButton = new javax.swing.JButton();
-        warnaField = new javax.swing.JTextField();
+        nopolTRANField = new javax.swing.JTextField();
+        okTRANButton = new javax.swing.JButton();
+        warnaTRANField = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        jtField = new javax.swing.JTextField();
-        tipeField = new javax.swing.JTextField();
-        totalField = new javax.swing.JTextField();
+        jtTRANField = new javax.swing.JTextField();
+        tipeTRANField = new javax.swing.JTextField();
+        totalTRANField = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        hargaField = new javax.swing.JTextField();
+        hargaTRANField = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        pilihanComboBox = new javax.swing.JComboBox<>();
+        pilihanTRANComboBox = new javax.swing.JComboBox<>();
         jLabel5 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jumlahField = new javax.swing.JTextField();
-        bayarField = new javax.swing.JTextField();
+        jumlahTRANField = new javax.swing.JTextField();
+        bayarTRANField = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        kembaliField = new javax.swing.JTextField();
+        kembaliTRANField = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
-        datatransaksiTable = new javax.swing.JTable();
+        datatransaksiTableTRAN = new javax.swing.JTable();
         jLabel12 = new javax.swing.JLabel();
-        namaField = new javax.swing.JTextField();
+        namaTRANField = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        alamatField = new javax.swing.JTextField();
-        nohpField = new javax.swing.JTextField();
+        alamatTRANField = new javax.swing.JTextField();
+        nohpTRANField = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
-        nikField = new javax.swing.JTextField();
-        kembaliButton = new javax.swing.JButton();
-        editButton = new javax.swing.JButton();
+        nikTRANField = new javax.swing.JTextField();
+        kembaliTRANButton = new javax.swing.JButton();
+        editTRANButton = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -78,13 +78,13 @@ public class Transaksi extends javax.swing.JFrame {
 
         jLabel1.setText("Merk");
 
-        nopolField.addActionListener(new java.awt.event.ActionListener() {
+        nopolTRANField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nopolFieldActionPerformed(evt);
+                nopolTRANFieldActionPerformed(evt);
             }
         });
 
-        okButton.setText("OK");
+        okTRANButton.setText("OK");
 
         jLabel2.setText("Tipe");
 
@@ -92,21 +92,21 @@ public class Transaksi extends javax.swing.JFrame {
 
         jLabel4.setText("Warna");
 
-        pilihanComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Honda", "Yamaha", "Kawasaki", "Suzuki" }));
+        pilihanTRANComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Honda", "Yamaha", "Kawasaki", "Suzuki" }));
 
         jLabel5.setText("Jenis Transmisi");
 
         jLabel9.setText("Jumlah");
 
-        jumlahField.addActionListener(new java.awt.event.ActionListener() {
+        jumlahTRANField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jumlahFieldActionPerformed(evt);
+                jumlahTRANFieldActionPerformed(evt);
             }
         });
 
-        bayarField.addActionListener(new java.awt.event.ActionListener() {
+        bayarTRANField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bayarFieldActionPerformed(evt);
+                bayarTRANFieldActionPerformed(evt);
             }
         });
 
@@ -114,7 +114,7 @@ public class Transaksi extends javax.swing.JFrame {
 
         jLabel11.setText("Kembali");
 
-        datatransaksiTable.setModel(new javax.swing.table.DefaultTableModel(
+        datatransaksiTableTRAN.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null, null, null, null, null, null, null, null},
@@ -133,11 +133,11 @@ public class Transaksi extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        jScrollPane2.setViewportView(datatransaksiTable);
-        if (datatransaksiTable.getColumnModel().getColumnCount() > 0) {
-            datatransaksiTable.getColumnModel().getColumn(1).setResizable(false);
-            datatransaksiTable.getColumnModel().getColumn(2).setResizable(false);
-            datatransaksiTable.getColumnModel().getColumn(3).setResizable(false);
+        jScrollPane2.setViewportView(datatransaksiTableTRAN);
+        if (datatransaksiTableTRAN.getColumnModel().getColumnCount() > 0) {
+            datatransaksiTableTRAN.getColumnModel().getColumn(1).setResizable(false);
+            datatransaksiTableTRAN.getColumnModel().getColumn(2).setResizable(false);
+            datatransaksiTableTRAN.getColumnModel().getColumn(3).setResizable(false);
         }
 
         jLabel12.setText("Nama");
@@ -146,22 +146,22 @@ public class Transaksi extends javax.swing.JFrame {
 
         jLabel14.setText("No Hp");
 
-        nohpField.addActionListener(new java.awt.event.ActionListener() {
+        nohpTRANField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nohpFieldActionPerformed(evt);
+                nohpTRANFieldActionPerformed(evt);
             }
         });
 
         jLabel15.setText("NIK");
 
-        kembaliButton.setText("Kembali");
-        kembaliButton.addActionListener(new java.awt.event.ActionListener() {
+        kembaliTRANButton.setText("Kembali");
+        kembaliTRANButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                kembaliButtonActionPerformed(evt);
+                kembaliTRANButtonActionPerformed(evt);
             }
         });
 
-        editButton.setText("Edit");
+        editTRANButton.setText("Edit");
 
         jMenu1.setText("File");
         jMenuBar1.add(jMenu1);
@@ -188,16 +188,16 @@ public class Transaksi extends javax.swing.JFrame {
                                     .addComponent(jLabel15))
                                 .addGap(14, 14, 14)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(nohpField, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE)
-                                    .addComponent(namaField)
-                                    .addComponent(alamatField)
-                                    .addComponent(nikField)))
+                                    .addComponent(nohpTRANField, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE)
+                                    .addComponent(namaTRANField)
+                                    .addComponent(alamatTRANField)
+                                    .addComponent(nikTRANField)))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(okButton)
+                                .addComponent(okTRANButton)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(editButton)
+                                .addComponent(editTRANButton)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(kembaliButton)))
+                                .addComponent(kembaliTRANButton)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -211,17 +211,17 @@ public class Transaksi extends javax.swing.JFrame {
                                         .addGroup(layout.createSequentialGroup()
                                             .addGap(45, 45, 45)
                                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(tipeField, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(pilihanComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addComponent(warnaField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addComponent(tipeTRANField, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(pilihanTRANComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(warnaTRANField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGroup(layout.createSequentialGroup()
                                     .addComponent(jLabel3)
                                     .addGap(82, 82, 82)
-                                    .addComponent(nopolField, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(nopolTRANField, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(jLabel5)
                                 .addGap(53, 53, 53)
-                                .addComponent(jtField, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jtTRANField, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel7)
@@ -231,11 +231,11 @@ public class Transaksi extends javax.swing.JFrame {
                             .addComponent(jLabel11))
                         .addGap(45, 45, 45)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(bayarField, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(totalField, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(hargaField, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jumlahField, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(kembaliField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(bayarTRANField, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(totalTRANField, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(hargaTRANField, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jumlahTRANField, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(kembaliTRANField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
                             .addGap(116, 116, 116)
@@ -256,27 +256,27 @@ public class Transaksi extends javax.swing.JFrame {
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(63, 63, 63)
                                         .addComponent(jLabel3))
-                                    .addComponent(totalField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(totalTRANField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel4)
-                                    .addComponent(warnaField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(warnaTRANField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel10)
-                                    .addComponent(bayarField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(bayarTRANField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jtTRANField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel5)
                                     .addComponent(jLabel11)
-                                    .addComponent(kembaliField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(kembaliTRANField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                             .addComponent(jLabel1)
-                                            .addComponent(pilihanComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(pilihanTRANComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jLabel12)
-                                            .addComponent(namaField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(namaTRANField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(layout.createSequentialGroup()
                                                 .addGap(18, 18, 18)
@@ -285,59 +285,59 @@ public class Transaksi extends javax.swing.JFrame {
                                                 .addGap(9, 9, 9)
                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                                     .addComponent(jLabel13)
-                                                    .addComponent(alamatField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                                    .addComponent(tipeField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addComponent(alamatTRANField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                    .addComponent(tipeTRANField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(8, 8, 8)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel14)
-                                    .addComponent(nohpField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(nopolField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(nohpTRANField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(nopolTRANField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel6))
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(nikField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(nikTRANField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel15))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(okButton)
-                                    .addComponent(editButton)
-                                    .addComponent(kembaliButton))))
+                                    .addComponent(okTRANButton)
+                                    .addComponent(editTRANButton)
+                                    .addComponent(kembaliTRANButton))))
                         .addGap(18, 44, Short.MAX_VALUE)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(62, 62, 62))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(hargaField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(hargaTRANField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel7))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel9)
-                            .addComponent(jumlahField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jumlahTRANField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void nopolFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nopolFieldActionPerformed
+    private void nopolTRANFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nopolTRANFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_nopolFieldActionPerformed
+    }//GEN-LAST:event_nopolTRANFieldActionPerformed
 
-    private void bayarFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bayarFieldActionPerformed
+    private void bayarTRANFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bayarTRANFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_bayarFieldActionPerformed
+    }//GEN-LAST:event_bayarTRANFieldActionPerformed
 
-    private void nohpFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nohpFieldActionPerformed
+    private void nohpTRANFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nohpTRANFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_nohpFieldActionPerformed
+    }//GEN-LAST:event_nohpTRANFieldActionPerformed
 
-    private void jumlahFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jumlahFieldActionPerformed
+    private void jumlahTRANFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jumlahTRANFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jumlahFieldActionPerformed
+    }//GEN-LAST:event_jumlahTRANFieldActionPerformed
 
-    private void kembaliButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kembaliButtonActionPerformed
+    private void kembaliTRANButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kembaliTRANButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_kembaliButtonActionPerformed
+    }//GEN-LAST:event_kembaliTRANButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -376,11 +376,11 @@ public class Transaksi extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField alamatField;
-    private javax.swing.JTextField bayarField;
-    private javax.swing.JTable datatransaksiTable;
-    private javax.swing.JButton editButton;
-    private javax.swing.JTextField hargaField;
+    private javax.swing.JTextField alamatTRANField;
+    private javax.swing.JTextField bayarTRANField;
+    private javax.swing.JTable datatransaksiTableTRAN;
+    private javax.swing.JButton editTRANButton;
+    private javax.swing.JTextField hargaTRANField;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -400,18 +400,18 @@ public class Transaksi extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextField jtField;
-    private javax.swing.JTextField jumlahField;
-    private javax.swing.JButton kembaliButton;
-    private javax.swing.JTextField kembaliField;
-    private javax.swing.JTextField namaField;
-    private javax.swing.JTextField nikField;
-    private javax.swing.JTextField nohpField;
-    private javax.swing.JTextField nopolField;
-    private javax.swing.JButton okButton;
-    private javax.swing.JComboBox<String> pilihanComboBox;
-    private javax.swing.JTextField tipeField;
-    private javax.swing.JTextField totalField;
-    private javax.swing.JTextField warnaField;
+    private javax.swing.JTextField jtTRANField;
+    private javax.swing.JTextField jumlahTRANField;
+    private javax.swing.JButton kembaliTRANButton;
+    private javax.swing.JTextField kembaliTRANField;
+    private javax.swing.JTextField namaTRANField;
+    private javax.swing.JTextField nikTRANField;
+    private javax.swing.JTextField nohpTRANField;
+    private javax.swing.JTextField nopolTRANField;
+    private javax.swing.JButton okTRANButton;
+    private javax.swing.JComboBox<String> pilihanTRANComboBox;
+    private javax.swing.JTextField tipeTRANField;
+    private javax.swing.JTextField totalTRANField;
+    private javax.swing.JTextField warnaTRANField;
     // End of variables declaration//GEN-END:variables
 }

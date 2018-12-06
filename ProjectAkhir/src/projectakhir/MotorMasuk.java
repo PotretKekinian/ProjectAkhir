@@ -29,25 +29,25 @@ public class MotorMasuk extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        tipeField = new javax.swing.JTextField();
+        tipeMMField = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        nopolField = new javax.swing.JTextField();
-        warnaField = new javax.swing.JTextField();
-        jtField = new javax.swing.JTextField();
-        tmField = new javax.swing.JTextField();
-        hargaField = new javax.swing.JTextField();
-        pilihanComboBox = new javax.swing.JComboBox<>();
+        nopolMMField = new javax.swing.JTextField();
+        warnaMMField = new javax.swing.JTextField();
+        jtMMField = new javax.swing.JTextField();
+        tmMMField = new javax.swing.JTextField();
+        hargaMMField = new javax.swing.JTextField();
+        merkMMComboBox = new javax.swing.JComboBox<>();
         jLabel8 = new javax.swing.JLabel();
-        daftarButton = new javax.swing.JButton();
+        daftarMMButton = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        datamasukTable = new javax.swing.JTable();
-        kembaliButton = new javax.swing.JButton();
-        editButton = new javax.swing.JButton();
+        datamasukTableMM = new javax.swing.JTable();
+        kembaliMMButton = new javax.swing.JButton();
+        editMMButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -55,9 +55,9 @@ public class MotorMasuk extends javax.swing.JFrame {
 
         jLabel2.setText("Tipe");
 
-        tipeField.addActionListener(new java.awt.event.ActionListener() {
+        tipeMMField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tipeFieldActionPerformed(evt);
+                tipeMMFieldActionPerformed(evt);
             }
         });
 
@@ -71,25 +71,36 @@ public class MotorMasuk extends javax.swing.JFrame {
 
         jLabel7.setText("Harga");
 
-        nopolField.addActionListener(new java.awt.event.ActionListener() {
+        nopolMMField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nopolFieldActionPerformed(evt);
+                nopolMMFieldActionPerformed(evt);
             }
         });
 
-        pilihanComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Honda", "Yamaha", "Kawasaki", "Suzuki" }));
+        jtMMField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtMMFieldActionPerformed(evt);
+            }
+        });
+
+        merkMMComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Honda", "Yamaha", "Kawasaki", "Suzuki" }));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel8.setText("Motor Masuk Showroom PotretKekinian");
         jLabel8.setAlignmentX(25.0F);
         jLabel8.setMaximumSize(new java.awt.Dimension(100, 14));
 
-        daftarButton.setText("Daftar");
+        daftarMMButton.setText("Daftar");
+        daftarMMButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                daftarMMButtonActionPerformed(evt);
+            }
+        });
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel9.setText("Data Motor Masuk");
 
-        datamasukTable.setModel(new javax.swing.table.DefaultTableModel(
+        datamasukTableMM.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null},
@@ -108,16 +119,16 @@ public class MotorMasuk extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        jScrollPane2.setViewportView(datamasukTable);
+        jScrollPane2.setViewportView(datamasukTableMM);
 
-        kembaliButton.setText("Kembali");
-        kembaliButton.addActionListener(new java.awt.event.ActionListener() {
+        kembaliMMButton.setText("Kembali");
+        kembaliMMButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                kembaliButtonActionPerformed(evt);
+                kembaliMMButtonActionPerformed(evt);
             }
         });
 
-        editButton.setText("Edit");
+        editMMButton.setText("Edit");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -137,13 +148,13 @@ public class MotorMasuk extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(pilihanComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(hargaField, javax.swing.GroupLayout.DEFAULT_SIZE, 195, Short.MAX_VALUE)
-                            .addComponent(tmField)
-                            .addComponent(jtField)
-                            .addComponent(warnaField)
-                            .addComponent(nopolField)
-                            .addComponent(tipeField))
+                            .addComponent(merkMMComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(hargaMMField, javax.swing.GroupLayout.DEFAULT_SIZE, 195, Short.MAX_VALUE)
+                            .addComponent(tmMMField)
+                            .addComponent(jtMMField)
+                            .addComponent(warnaMMField)
+                            .addComponent(nopolMMField)
+                            .addComponent(tipeMMField))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 570, Short.MAX_VALUE)
@@ -153,11 +164,11 @@ public class MotorMasuk extends javax.swing.JFrame {
                                 .addGap(0, 0, Short.MAX_VALUE)))
                         .addGap(29, 29, 29))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(daftarButton)
+                        .addComponent(daftarMMButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(editButton)
+                        .addComponent(editMMButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(kembaliButton, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(kembaliMMButton, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))))
             .addGroup(layout.createSequentialGroup()
                 .addGap(225, 225, 225)
@@ -174,57 +185,65 @@ public class MotorMasuk extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel1)
-                            .addComponent(pilihanComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(merkMMComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addComponent(jLabel2))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(tipeField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(tipeMMField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel9)))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel3)
-                    .addComponent(nopolField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(nopolMMField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel4)
-                            .addComponent(warnaField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(warnaMMField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel5)
-                            .addComponent(jtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jtMMField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(12, 12, 12)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel6)
-                            .addComponent(tmField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(tmMMField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel7)
-                            .addComponent(hargaField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(hargaMMField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(daftarButton)
-                    .addComponent(editButton)
-                    .addComponent(kembaliButton))
+                    .addComponent(daftarMMButton)
+                    .addComponent(editMMButton)
+                    .addComponent(kembaliMMButton))
                 .addContainerGap(30, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void nopolFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nopolFieldActionPerformed
+    private void nopolMMFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nopolMMFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_nopolFieldActionPerformed
+    }//GEN-LAST:event_nopolMMFieldActionPerformed
 
-    private void kembaliButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kembaliButtonActionPerformed
+    private void kembaliMMButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kembaliMMButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_kembaliButtonActionPerformed
+    }//GEN-LAST:event_kembaliMMButtonActionPerformed
 
-    private void tipeFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tipeFieldActionPerformed
+    private void tipeMMFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tipeMMFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tipeFieldActionPerformed
+    }//GEN-LAST:event_tipeMMFieldActionPerformed
+
+    private void jtMMFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtMMFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtMMFieldActionPerformed
+
+    private void daftarMMButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_daftarMMButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_daftarMMButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -263,10 +282,10 @@ public class MotorMasuk extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton daftarButton;
-    private javax.swing.JTable datamasukTable;
-    private javax.swing.JButton editButton;
-    private javax.swing.JTextField hargaField;
+    private javax.swing.JButton daftarMMButton;
+    private javax.swing.JTable datamasukTableMM;
+    private javax.swing.JButton editMMButton;
+    private javax.swing.JTextField hargaMMField;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -277,12 +296,12 @@ public class MotorMasuk extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextField jtField;
-    private javax.swing.JButton kembaliButton;
-    private javax.swing.JTextField nopolField;
-    private javax.swing.JComboBox<String> pilihanComboBox;
-    private javax.swing.JTextField tipeField;
-    private javax.swing.JTextField tmField;
-    private javax.swing.JTextField warnaField;
+    private javax.swing.JTextField jtMMField;
+    private javax.swing.JButton kembaliMMButton;
+    private javax.swing.JComboBox<String> merkMMComboBox;
+    private javax.swing.JTextField nopolMMField;
+    private javax.swing.JTextField tipeMMField;
+    private javax.swing.JTextField tmMMField;
+    private javax.swing.JTextField warnaMMField;
     // End of variables declaration//GEN-END:variables
 }

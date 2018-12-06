@@ -54,18 +54,18 @@
                               </Group>
                               <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="nohpField" alignment="0" pref="132" max="32767" attributes="0"/>
-                                  <Component id="namaField" max="32767" attributes="0"/>
-                                  <Component id="alamatField" max="32767" attributes="0"/>
-                                  <Component id="nikField" max="32767" attributes="0"/>
+                                  <Component id="nohpTRANField" alignment="0" pref="132" max="32767" attributes="0"/>
+                                  <Component id="namaTRANField" max="32767" attributes="0"/>
+                                  <Component id="alamatTRANField" max="32767" attributes="0"/>
+                                  <Component id="nikTRANField" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="okButton" min="-2" max="-2" attributes="0"/>
+                              <Component id="okTRANButton" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="editButton" min="-2" max="-2" attributes="0"/>
+                              <Component id="editTRANButton" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="kembaliButton" min="-2" max="-2" attributes="0"/>
+                              <Component id="kembaliTRANButton" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
@@ -82,23 +82,23 @@
                                       <Group type="102" attributes="0">
                                           <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="tipeField" alignment="0" min="-2" pref="173" max="-2" attributes="0"/>
-                                              <Component id="pilihanComboBox" alignment="0" min="-2" pref="94" max="-2" attributes="0"/>
+                                              <Component id="tipeTRANField" alignment="0" min="-2" pref="173" max="-2" attributes="0"/>
+                                              <Component id="pilihanTRANComboBox" alignment="0" min="-2" pref="94" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <Component id="warnaField" alignment="1" min="-2" pref="173" max="-2" attributes="0"/>
+                                      <Component id="warnaTRANField" alignment="1" min="-2" pref="173" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" attributes="0">
                                   <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="82" max="-2" attributes="0"/>
-                                  <Component id="nopolField" min="-2" pref="173" max="-2" attributes="0"/>
+                                  <Component id="nopolTRANField" min="-2" pref="173" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
-                              <Component id="jtField" min="-2" pref="173" max="-2" attributes="0"/>
+                              <Component id="jtTRANField" min="-2" pref="173" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
@@ -111,11 +111,11 @@
                       </Group>
                       <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="bayarField" alignment="0" max="32767" attributes="0"/>
-                          <Component id="totalField" alignment="0" max="32767" attributes="0"/>
-                          <Component id="hargaField" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jumlahField" alignment="0" max="32767" attributes="0"/>
-                          <Component id="kembaliField" alignment="0" min="-2" pref="191" max="-2" attributes="0"/>
+                          <Component id="bayarTRANField" alignment="0" max="32767" attributes="0"/>
+                          <Component id="totalTRANField" alignment="0" max="32767" attributes="0"/>
+                          <Component id="hargaTRANField" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jumlahTRANField" alignment="0" max="32767" attributes="0"/>
+                          <Component id="kembaliTRANField" alignment="0" min="-2" pref="191" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -144,21 +144,21 @@
                                       <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
                                       <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="totalField" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="totalTRANField" alignment="1" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="warnaField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="warnaTRANField" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="bayarField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="bayarTRANField" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jtField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jtTRANField" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="kembaliField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="kembaliTRANField" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
@@ -166,9 +166,9 @@
                                   <Group type="102" alignment="1" attributes="0">
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="pilihanComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="pilihanTRANComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="namaField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="namaTRANField" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" attributes="0">
@@ -179,30 +179,30 @@
                                               <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="3" attributes="0">
                                                   <Component id="jLabel13" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="alamatField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="alamatTRANField" alignment="3" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                       </Group>
                                   </Group>
-                                  <Component id="tipeField" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="tipeTRANField" alignment="1" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel14" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="nohpField" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="nopolField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="nohpTRANField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="nopolTRANField" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="nikField" min="-2" max="-2" attributes="0"/>
+                                  <Component id="nikTRANField" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="okButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="editButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="kembaliButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="okTRANButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="editTRANButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="kembaliTRANButton" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -212,13 +212,13 @@
                   </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="hargaField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="hargaTRANField" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
-                          <Component id="jumlahField" min="-2" max="-2" attributes="0"/>
+                          <Component id="jumlahTRANField" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
@@ -255,42 +255,42 @@
         <Property name="text" type="java.lang.String" value="Merk"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="nopolField">
+    <Component class="javax.swing.JTextField" name="nopolTRANField">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nopolFieldActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nopolTRANFieldActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="okButton">
+    <Component class="javax.swing.JButton" name="okTRANButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="OK"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="warnaField">
+    <Component class="javax.swing.JTextField" name="warnaTRANField">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
         <Property name="text" type="java.lang.String" value="Tipe"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jtField">
+    <Component class="javax.swing.JTextField" name="jtTRANField">
     </Component>
-    <Component class="javax.swing.JTextField" name="tipeField">
+    <Component class="javax.swing.JTextField" name="tipeTRANField">
     </Component>
-    <Component class="javax.swing.JTextField" name="totalField">
+    <Component class="javax.swing.JTextField" name="totalTRANField">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
         <Property name="text" type="java.lang.String" value="NOPOL"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="hargaField">
+    <Component class="javax.swing.JTextField" name="hargaTRANField">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
         <Property name="text" type="java.lang.String" value="Warna"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JComboBox" name="pilihanComboBox">
+    <Component class="javax.swing.JComboBox" name="pilihanTRANComboBox">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="4">
@@ -315,14 +315,14 @@
         <Property name="text" type="java.lang.String" value="Jumlah"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jumlahField">
+    <Component class="javax.swing.JTextField" name="jumlahTRANField">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jumlahFieldActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jumlahTRANFieldActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="bayarField">
+    <Component class="javax.swing.JTextField" name="bayarTRANField">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bayarFieldActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bayarTRANFieldActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel10">
@@ -335,7 +335,7 @@
         <Property name="text" type="java.lang.String" value="Kembali"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="kembaliField">
+    <Component class="javax.swing.JTextField" name="kembaliTRANField">
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane2">
       <AuxValues>
@@ -344,7 +344,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTable" name="datatransaksiTable">
+        <Component class="javax.swing.JTable" name="datatransaksiTableTRAN">
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
               <Table columnCount="14" rowCount="4">
@@ -450,7 +450,7 @@
         <Property name="text" type="java.lang.String" value="Nama"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="namaField">
+    <Component class="javax.swing.JTextField" name="namaTRANField">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel13">
       <Properties>
@@ -462,11 +462,11 @@
         <Property name="text" type="java.lang.String" value="No Hp"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="alamatField">
+    <Component class="javax.swing.JTextField" name="alamatTRANField">
     </Component>
-    <Component class="javax.swing.JTextField" name="nohpField">
+    <Component class="javax.swing.JTextField" name="nohpTRANField">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nohpFieldActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nohpTRANFieldActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel15">
@@ -474,17 +474,17 @@
         <Property name="text" type="java.lang.String" value="NIK"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="nikField">
+    <Component class="javax.swing.JTextField" name="nikTRANField">
     </Component>
-    <Component class="javax.swing.JButton" name="kembaliButton">
+    <Component class="javax.swing.JButton" name="kembaliTRANButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Kembali"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="kembaliButtonActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="kembaliTRANButtonActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="editButton">
+    <Component class="javax.swing.JButton" name="editTRANButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Edit"/>
       </Properties>

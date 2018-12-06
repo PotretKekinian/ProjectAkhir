@@ -28,23 +28,23 @@ public class Data extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel2 = new javax.swing.JLabel();
-        dtButton = new javax.swing.JToggleButton();
-        mmButton = new javax.swing.JToggleButton();
-        mkButton = new javax.swing.JToggleButton();
+        dtbutton = new javax.swing.JToggleButton();
+        mmbutton = new javax.swing.JToggleButton();
+        mkbutton = new javax.swing.JToggleButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        dtButton.setText("Data Transaksi");
+        dtbutton.setText("Data Transaksi");
 
-        mmButton.setText("Motor Masuk");
-        mmButton.addActionListener(new java.awt.event.ActionListener() {
+        mmbutton.setText("Motor Masuk");
+        mmbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mmButtonActionPerformed(evt);
+                mmbuttonActionPerformed(evt);
             }
         });
 
-        mkButton.setText("Motor Keluar");
+        mkbutton.setText("Motor Keluar");
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel1.setText("Data Showroom PotretKekinian");
@@ -64,10 +64,10 @@ public class Data extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel2)
                                 .addGap(105, 105, 105)
-                                .addComponent(mmButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(mmbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(mkButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(dtButton, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(mkbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(dtbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(35, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -76,11 +76,11 @@ public class Data extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(mmButton)
+                .addComponent(mmbutton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(mkButton)
+                .addComponent(mkbutton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(dtButton)
+                .addComponent(dtbutton)
                 .addGap(84, 84, 84))
             .addGroup(layout.createSequentialGroup()
                 .addGap(65, 65, 65)
@@ -91,9 +91,9 @@ public class Data extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void mmButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mmButtonActionPerformed
+    private void mmbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mmbuttonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_mmButtonActionPerformed
+    }//GEN-LAST:event_mmbuttonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -132,10 +132,10 @@ public class Data extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JToggleButton dtButton;
+    private javax.swing.JToggleButton dtbutton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JToggleButton mkButton;
-    private javax.swing.JToggleButton mmButton;
+    private javax.swing.JToggleButton mkbutton;
+    private javax.swing.JToggleButton mmbutton;
     // End of variables declaration//GEN-END:variables
 }
