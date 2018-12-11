@@ -95,8 +95,5 @@ public class Motor {
 
     public void setHarga(int harga) {
         this.harga = harga;
-    }
-   
-   
-   
+    }  
 }

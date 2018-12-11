@@ -5,6 +5,10 @@
  */
 package projectakhir;
 
+import javax.swing.table.DefaultTableModel;
+import projectakhirclass.InputMotor;
+import projectakhirclass.Motor;
+
 /**
  *
  * @author sin
@@ -14,10 +18,29 @@ public class MotorMasuk extends javax.swing.JFrame {
     /**
      * Creates new form MotorMasuk
      */
+     DefaultTableModel TabMotor;
+     InputMotor DataMotor;
+    
+   
     public MotorMasuk() {
+        DataMotor = new InputMotor ();
         initComponents();
+        LihatDataMotor();
     }
-
+    
+    
+    public final void LihatDataMotor(){
+        String [] NamaKolom = {"Merk","Tipe", "Nopol", "Warna", "Jenis Transmisi", "Tanggal Masuk", "Harga"};
+        Object[][] objekMotor = new Object[DataMotor.getData().size()][7];
+        int i = 0;
+        for(Motor mtr : DataMotor.getData()){
+            String arrayMotor[] = {mtr.getMerk(), mtr.getTipe(), mtr.getNopol(), mtr.getWarna(), mtr.getJt(), mtr.getTglmsk(), mtr.getHarga()}
+            objekMotor[i] = arrayMotor;
+            i++;
+        }
+        TabMotor = new DefaultTableModel(objekMotor, NamaKolom);
+        datamasukTableMM.setModel(TabMotor);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -251,7 +274,8 @@ public class MotorMasuk extends javax.swing.JFrame {
     }//GEN-LAST:event_jtMMFieldActionPerformed
 
     private void daftarMMButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_daftarMMButtonActionPerformed
-        // TODO add your handling code here:
+        DataMotor.isiData();
+        LihatDataMahasiswa();
     }//GEN-LAST:event_daftarMMButtonActionPerformed
 
     private void warnaMMFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_warnaMMFieldActionPerformed
@@ -320,4 +344,5 @@ public class MotorMasuk extends javax.swing.JFrame {
     private javax.swing.JTextField tmMMField;
     private javax.swing.JTextField warnaMMField;
     // End of variables declaration//GEN-END:variables
+
 }
