@@ -33,11 +33,6 @@ public class MotorMasuk extends javax.swing.JFrame {
         String [] NamaKolom = {"Merk","Tipe", "Nopol", "Warna", "Jenis Transmisi", "Tanggal Masuk", "Harga"};
         Object[][] objekMotor = new Object[DataMotor.getData().size()][7];
         int i = 0;
-        for(Motor mtr : DataMotor.getData()){
-            String arrayMotor[] = {mtr.getMerk(), mtr.getTipe(), mtr.getNopol(), mtr.getWarna(), mtr.getJt(), mtr.getTglmsk(), mtr.getHarga()}
-            objekMotor[i] = arrayMotor;
-            i++;
-        }
         TabMotor = new DefaultTableModel(objekMotor, NamaKolom);
         datamasukTableMM.setModel(TabMotor);
     }
@@ -275,7 +270,7 @@ public class MotorMasuk extends javax.swing.JFrame {
 
     private void daftarMMButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_daftarMMButtonActionPerformed
         DataMotor.isiData();
-        LihatDataMahasiswa();
+        LihatDataMotor();
     }//GEN-LAST:event_daftarMMButtonActionPerformed
 
     private void warnaMMFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_warnaMMFieldActionPerformed

@@ -4,8 +4,6 @@
  * and open the template in the editor.
  */
 package projectakhirclass;
-
-import static com.sun.org.apache.xalan.internal.lib.ExsltDatetime.date;
 import java.util.Date;
 
 /**
@@ -96,4 +94,8 @@ public class Motor {
     public void setHarga(int harga) {
         this.harga = harga;
     }  
+    
+    public String toString(){
+        return this.merk;
+    }
 }

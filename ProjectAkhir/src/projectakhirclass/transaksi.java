@@ -15,10 +15,21 @@ public class transaksi {
     private String nama;
     private String alamat;
     private int noHp;
-    private int ink;
+    private int ink; 
     private ArrayList<Merk> merk = new ArrayList<>();
     private String tipe;
     private int nopol;
     private String warna;
     private String jt;
+
+    public transaksi(String nama, String alamat, int noHp, int ink, String tipe, int nopol, String warna, String jt) {
+        this.nama = nama;
+        this.alamat = alamat;
+        this.noHp = noHp;
+        this.ink = ink;
+        this.tipe = tipe;
+        this.nopol = nopol;
+        this.warna = warna;
+        this.jt = jt;
+    }
 }

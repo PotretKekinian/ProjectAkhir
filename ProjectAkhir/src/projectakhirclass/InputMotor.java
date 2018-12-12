@@ -24,4 +24,8 @@ public class InputMotor {
     public ArrayList<Motor> getData(){
         return ListMotor;
     }
+
+    public void isiData() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
