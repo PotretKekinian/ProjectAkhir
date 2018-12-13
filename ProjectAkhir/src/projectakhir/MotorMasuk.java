@@ -339,5 +339,4 @@ public class MotorMasuk extends javax.swing.JFrame {
     private javax.swing.JTextField tmMMField;
     private javax.swing.JTextField warnaMMField;
     // End of variables declaration//GEN-END:variables
-
 }
