@@ -12,6 +12,7 @@ import java.util.*;
 public class InputMotor {
     ArrayList<Motor> ListMotor;
     
+    
     public InputMotor(){
         ListMotor = new ArrayList();
     }

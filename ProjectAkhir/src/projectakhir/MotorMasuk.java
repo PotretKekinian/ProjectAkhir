@@ -4,38 +4,72 @@
  * and open the template in the editor.
  */
 package projectakhir;
-
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import projectakhirclass.InputMotor;
 import projectakhirclass.Motor;
+import projectakhir.koneksi.Koneksi;
 
 /**
  *
  * @author sin
  */
 public class MotorMasuk extends javax.swing.JFrame {
-
-    /**
-     * Creates new form MotorMasuk
-     */
-     DefaultTableModel TabMotor;
-     InputMotor DataMotor;
+    public Connection con;
+    public Statement st;
+    public ResultSet rs;
+    DefaultTableModel TabMotor;
+    InputMotor DataMotor;    
+    Koneksi kn;
     
-   
-    public MotorMasuk() {
+    public MotorMasuk() throws SQLException {
         DataMotor = new InputMotor ();
         initComponents();
         LihatDataMotor();
     }
     
     
-    public final void LihatDataMotor(){
-        String [] NamaKolom = {"Merk","Tipe", "Nopol", "Warna", "Jenis Transmisi", "Tanggal Masuk", "Harga"};
-        Object[][] objekMotor = new Object[DataMotor.getData().size()][7];
-        int i = 0;
-        TabMotor = new DefaultTableModel(objekMotor, NamaKolom);
-        datamasukTableMM.setModel(TabMotor);
-    }
+    public final void LihatDataMotor() throws SQLException{
+        con = DriverManager.getConnection("jdbc:mysql://localhost/potretkekinian","root","");
+        DefaultTableModel tblBrg = new DefaultTableModel();
+        tblBrg.addColumn("Merk");
+        tblBrg.addColumn("Tipe");
+        tblBrg.addColumn("Nopol");
+        tblBrg.addColumn("Warna");
+        tblBrg.addColumn("Jenis Transmisi");
+        tblBrg.addColumn("Tanggal Masuk");
+        tblBrg.addColumn("Harga");
+        
+        try {
+            String sql = "Select * From potretkekinian ORDER BY motormasuk";
+            st = con.prepareStatement(sql);
+            rs = st.executeQuery(sql);
+            while (rs.next()){
+                tblBrg.addRow(new Object[]{
+                rs.getString(1),
+                rs.getString(2),
+                rs.getString(3),
+                rs.getString(4),
+                rs.getString(5),
+                rs.getString(6),
+                rs.getString(7)
+            });
+        }
+            tblBrg.setColumnCount(SOMEBITS);
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(rootPane, "Koneksi Berhasil!!!");
+        }
+    }   
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -269,8 +303,8 @@ public class MotorMasuk extends javax.swing.JFrame {
     }//GEN-LAST:event_jtMMFieldActionPerformed
 
     private void daftarMMButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_daftarMMButtonActionPerformed
-        DataMotor.isiData();
-        LihatDataMotor();
+        DefaultTableModel model = (DefaultTableModel) datamasukTableMM.getModel();
+       
     }//GEN-LAST:event_daftarMMButtonActionPerformed
 
     private void warnaMMFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_warnaMMFieldActionPerformed
@@ -312,7 +346,11 @@ public class MotorMasuk extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MotorMasuk().setVisible(true);
+                try {
+                    new MotorMasuk().setVisible(true);
+                } catch (SQLException ex) {
+                    Logger.getLogger(MotorMasuk.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }
@@ -339,4 +377,10 @@ public class MotorMasuk extends javax.swing.JFrame {
     private javax.swing.JTextField tmMMField;
     private javax.swing.JTextField warnaMMField;
     // End of variables declaration//GEN-END:variables
+
+    private static class object {
+
+        public object() {
+        }
+    }
 }
