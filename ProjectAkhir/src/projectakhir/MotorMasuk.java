@@ -344,6 +344,7 @@ public class MotorMasuk extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
+    
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
@@ -377,10 +378,4 @@ public class MotorMasuk extends javax.swing.JFrame {
     private javax.swing.JTextField tmMMField;
     private javax.swing.JTextField warnaMMField;
     // End of variables declaration//GEN-END:variables
-
-    private static class object {
-
-        public object() {
-        }
-    }
 }

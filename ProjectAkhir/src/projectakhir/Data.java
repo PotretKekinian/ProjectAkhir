@@ -4,6 +4,9 @@
  * and open the template in the editor.
  */
 package projectakhir;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 /**
  *
@@ -114,7 +117,12 @@ public class Data extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void mmbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mmbuttonActionPerformed
-        MotorMasuk motor=new MotorMasuk();
+       MotorMasuk motor = null;
+        try {
+            motor = new MotorMasuk();
+        } catch (SQLException ex) {
+            Logger.getLogger(Data.class.getName()).log(Level.SEVERE, null, ex);
+        }
         motor.setVisible(true);
     }//GEN-LAST:event_mmbuttonActionPerformed
 
@@ -129,7 +137,8 @@ public class Data extends javax.swing.JFrame {
     }//GEN-LAST:event_dtbuttonActionPerformed
 
     private void KeluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KeluarActionPerformed
-     
+        LoginAdmin la=new LoginAdmin();
+        la.setVisible(true);
     }//GEN-LAST:event_KeluarActionPerformed
 
     /**
