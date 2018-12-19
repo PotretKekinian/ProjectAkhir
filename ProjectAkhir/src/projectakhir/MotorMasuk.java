@@ -120,7 +120,7 @@ public class MotorMasuk extends javax.swing.JFrame {
 
         jLabel6.setText("Tanggal Masuk");
 
-        jLabel7.setText("Harga");
+        jLabel7.setText("Harga Beli");
 
         nopolMMField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -171,7 +171,7 @@ public class MotorMasuk extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null}
             },
             new String [] {
-                "Merk", "Tipe", "NOPOL", "Warna", "Jenis Transmisi", "Tanggal Masuk", "Harga"
+                "Merk", "Tipe", "NOPOL", "Warna", "Jenis Transmisi", "Tanggal Masuk", "Harga Beli"
             }
         ) {
             Class[] types = new Class [] {
