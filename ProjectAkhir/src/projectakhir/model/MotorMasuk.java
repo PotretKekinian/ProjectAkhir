@@ -89,4 +89,6 @@ public class MotorMasuk {
     public String toString(){
         return this.merk;
     }
+    
+    
 }
