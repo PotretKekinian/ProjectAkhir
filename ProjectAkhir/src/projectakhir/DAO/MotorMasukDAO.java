@@ -25,8 +25,6 @@ import projectakhirclass.Motor;
 public abstract class MotorMasukDAO implements IMotorMasuk{
 
     public Connection con;
-    public Statement st;
-    public ResultSet rs;
     
     String insert ="Insert Into motormasuk (merk, tipe, nopol, warna, jt, tglmsk, harga) VALUES (?,?,?,?,?,?,?);";
     String update ="Update motormasuk set merk=?, tipe=?, nopol=?, warna=?, jt=?, tglmsk=?, harga=?;";
@@ -34,8 +32,8 @@ public abstract class MotorMasukDAO implements IMotorMasuk{
     String select ="Select * From motormasuk;";
     String carinama ="Select * From motormasuk WHERE tipe like ?";
 
-    public MotorMasukDAO(Connection con) {
-        this.con=con;
+    public MotorMasukDAO() {
+        con=Koneksi.Connection();
     }
     
     
@@ -46,11 +44,12 @@ public abstract class MotorMasukDAO implements IMotorMasuk{
             st=con.prepareStatement(insert);
             st.setString(1, m.getMerk());
             st.setString(2, m.getTipe());
-            st.setInt(3, m.getNopol());
+            st.setString(3, m.getNopol());
             st.setString(4, m.getWarna());
             st.setString(5, m.getJt());
-            st.setDate(6, (Date) m.getTglmsk());
+            st.setString(6, m.getTglmsk());
             st.setInt(7, m.getHarga());
+            st.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }finally{
@@ -69,10 +68,10 @@ public abstract class MotorMasukDAO implements IMotorMasuk{
             st=con.prepareStatement(insert);
             st.setString(1, m.getMerk());
             st.setString(2, m.getTipe());
-            st.setInt(3, m.getNopol());
+            st.setString(3, m.getNopol());
             st.setString(4, m.getWarna());
             st.setString(5, m.getJt());
-            st.setDate(6, (Date) m.getTglmsk());
+            st.setString(6, m.getTglmsk());
             st.setInt(7, m.getHarga());
         } catch (SQLException e) {
             e.printStackTrace();
@@ -112,12 +111,13 @@ public abstract class MotorMasukDAO implements IMotorMasuk{
             ResultSet rs = st.executeQuery(select);
             while (rs.next()) {
                 Motor m = new Motor();
+                m.setId(rs.getInt("id"));
                 m.setMerk(rs.getString("Merk"));
                 m.setTipe(rs.getString("Tipe"));
-                m.setNopol(rs.getInt("NOPOL"));
+                m.setNopol(rs.getString("NOPOL"));
                 m.setWarna(rs.getString("Warna"));
                 m.setJt(rs.getString("Jenis Transmisi"));
-                m.setTglmsk(rs.getDate("Tanggal Masuk"));
+                m.setTglmsk(rs.getString("Tanggal Masuk"));
                 m.setHarga(rs.getInt("Harga"));
                 lm.add(m);
             }

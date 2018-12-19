@@ -9,66 +9,73 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.sql.SQLException;
+import java.util.Calendar;
 import javax.swing.JOptionPane;
 import java.util.Date;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
+import projectakhir.DAO.IMotorMasuk;
+import projectakhir.DAO.MotorMasukDAO;
 import projectakhirclass.InputMotor;
 import projectakhirclass.Motor;
 import projectakhir.koneksi.Koneksi;
+import projectakhir.model.TabelModelMotor;
 
 /**
  *
  * @author sin
  */
 public class MotorMasuk extends javax.swing.JFrame {
-    public Connection con;
-    public Statement st;
-    public ResultSet rs;
-    DefaultTableModel TabMotor;
-    InputMotor DataMotor;    
-    Koneksi kn;
+    MotorMasukDAO dao;
     
     public MotorMasuk() throws SQLException {
-        DataMotor = new InputMotor ();
         initComponents();
-        LihatDataMotor();
+        dao= new MotorMasukDAO() {};
+        isiTahun();
+        isiTanggal();
+        isiTable();
     }
     
+     private void isiTable(){
+        IMotorMasuk iMotor = new MotorMasukDAO() {};
+        List<Motor> lm = iMotor.getAll();
+        TabelModelMotor tbModel = new TabelModelMotor(lm);
+        this.datamasukTableMM.setModel(tbModel);
+    }
     
-    public final void LihatDataMotor() throws SQLException{
-        con = DriverManager.getConnection("jdbc:mysql://localhost/potretkekinian","root","");
-        DefaultTableModel tblBrg = new DefaultTableModel();
-        tblBrg.addColumn("Merk");
-        tblBrg.addColumn("Tipe");
-        tblBrg.addColumn("Nopol");
-        tblBrg.addColumn("Warna");
-        tblBrg.addColumn("Jenis Transmisi");
-        tblBrg.addColumn("Tanggal Masuk");
-        tblBrg.addColumn("Harga");
-        
-        try {
-            String sql = "Select * From potretkekinian ORDER BY motormasuk";
-            st = con.prepareStatement(sql);
-            rs = st.executeQuery(sql);
-            while (rs.next()){
-                tblBrg.addRow(new Object[]{
-                rs.getString(1),
-                rs.getString(2),
-                rs.getString(3),
-                rs.getString(4),
-                rs.getString(5),
-                rs.getString(6),
-                rs.getString(7)
-            });
+    public String getTgl(){
+        int dd = Integer.parseInt(tglComboBox.getSelectedItem().toString());
+        int mm = bulanComboBox.getSelectedIndex()+1;
+        int yy = Integer.parseInt(tahunComboBox.getSelectedItem().toString());
+        String tgl = yy+"/"+mm+"/"+dd;
+        return tgl;
+    }
+    
+    private void isiTahun(){
+        Calendar cal = Calendar.getInstance();
+        int awal = cal.get(cal.YEAR);
+        Integer[] isi = new Integer[60];
+        for (int i = 0; i < isi.length; i++) {
+            isi[i]=awal-i;
         }
-            tblBrg.setColumnCount(SOMEBITS);
-        } catch (SQLException e) {
-            JOptionPane.showMessageDialog(rootPane, "Koneksi Berhasil!!!");
+        DefaultComboBoxModel cbtahunModel = new DefaultComboBoxModel(isi);
+        tahunComboBox.setModel(cbtahunModel);
+    }
+    
+    private void isiTanggal(){
+        int tgl=1;
+        Integer[] isi = new Integer[31];
+        for (int i = 0; i < 31; i++) {
+            isi[i]=tgl;
+            tgl++;
         }
-    }   
+        DefaultComboBoxModel cbtglModel = new DefaultComboBoxModel(isi);
+        tglComboBox.setModel(cbtglModel);
+    }
     
     /**
      * This method is called from within the constructor to initialize the form.

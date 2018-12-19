@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package projectakhir.koneksi;
+import com.mysql.jdbc.jdbc2.optional.MysqlConnectionPoolDataSource;
+import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 import java.sql.*;
 import javax.swing.JOptionPane;
 
@@ -12,18 +14,20 @@ import javax.swing.JOptionPane;
  * @author sin
  */
 public class Koneksi {
-    public Connection con;
-    public Statement st;
-    public ResultSet rs;
+   static Connection con;
     
-    public Connection Class(){
-        try{
-            Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost/potretkekinian","root","");
-            JOptionPane.showMessageDialog(null, "Koneksi Berhasil");
-        }catch (Exception e){
-            JOptionPane.showMessageDialog(null, "Koneksi Gagal");
-        }
+    public static Connection Connection(){
+        if (con==null){
+        MysqlDataSource data = new MysqlConnectionPoolDataSource();
+            data.setDatabaseName("potretkekinian");
+            data.setUser("root");
+            data.setPassword("");
+            try {
+                con=data.getConnection();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }   
         return con;
     }
 }

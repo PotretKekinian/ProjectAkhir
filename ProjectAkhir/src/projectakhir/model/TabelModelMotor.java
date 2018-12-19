@@ -25,18 +25,19 @@ public class TabelModelMotor extends AbstractTableModel{
     
     @Override
     public int getColumnCount(){
-        return 7;
+        return 8;
     }
     
     public String getColumnName (int column){
         switch(column){
-            case 0: return "Merk";
-            case 1: return "Tipe";
-            case 2: return "Nopol";
-            case 3: return "Warna";
-            case 4: return "Jenis Transmisi";
-            case 5: return "Tanggal Masuk";
-            case 6: return "Harga";
+            case 0: return "ID";
+            case 1: return "Merk";
+            case 2: return "Tipe";
+            case 3: return "Nopol";
+            case 4: return "Warna";
+            case 5: return "Jenis Transmisi";
+            case 6: return "Tanggal Masuk";
+            case 7: return "Harga";
             default: return null;
         }
     }
@@ -44,13 +45,14 @@ public class TabelModelMotor extends AbstractTableModel{
     @Override
     public Object getValueAt(int rowIndex, int columnIndex){
         switch (columnIndex){
-            case 0: return lm.get(rowIndex).getMerk();
-            case 1: return lm.get(rowIndex).getTipe();
-            case 2: return lm.get(rowIndex).getNopol();
-            case 3: return lm.get(rowIndex).getWarna();
-            case 4: return lm.get(rowIndex).getJt();
-            case 5: return lm.get(rowIndex).getTglmsk();
-            case 6: return lm.get(rowIndex).getHarga();
+            case 0: return lm.get(rowIndex).getId();
+            case 1: return lm.get(rowIndex).getMerk();
+            case 2: return lm.get(rowIndex).getTipe();
+            case 3: return lm.get(rowIndex).getNopol();
+            case 4: return lm.get(rowIndex).getWarna();
+            case 5: return lm.get(rowIndex).getJt();
+            case 6: return lm.get(rowIndex).getTglmsk();
+            case 7: return lm.get(rowIndex).getHarga();
             default: return null;
         }
     }
