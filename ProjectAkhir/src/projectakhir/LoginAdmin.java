@@ -113,7 +113,7 @@ public class LoginAdmin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
-        Masuk();
+       Masuk();
     }//GEN-LAST:event_loginButtonActionPerformed
 
     /**
