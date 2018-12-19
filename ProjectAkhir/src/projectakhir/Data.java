@@ -36,6 +36,7 @@ public class Data extends javax.swing.JFrame {
         mkbutton = new javax.swing.JToggleButton();
         jLabel1 = new javax.swing.JLabel();
         Keluar = new javax.swing.JButton();
+        listButton = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -70,6 +71,13 @@ public class Data extends javax.swing.JFrame {
             }
         });
 
+        listButton.setText("List Motor");
+        listButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                listButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -85,7 +93,8 @@ public class Data extends javax.swing.JFrame {
                             .addComponent(mmbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(mkbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(listButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(mkbutton, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
                                     .addComponent(dtbutton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(Keluar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addGap(2, 2, 2))))
@@ -105,12 +114,14 @@ public class Data extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(mmbutton)
                         .addGap(18, 18, 18)
-                        .addComponent(mkbutton)
-                        .addGap(18, 18, 18)
-                        .addComponent(dtbutton)))
+                        .addComponent(mkbutton)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(listButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(dtbutton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Keluar)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
 
         pack();
@@ -140,6 +151,11 @@ public class Data extends javax.swing.JFrame {
         LoginAdmin la=new LoginAdmin();
         la.setVisible(true);
     }//GEN-LAST:event_KeluarActionPerformed
+
+    private void listButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listButtonActionPerformed
+        ListMotor ls=new ListMotor();
+        ls.setVisible(true);
+    }//GEN-LAST:event_listButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -182,6 +198,7 @@ public class Data extends javax.swing.JFrame {
     private javax.swing.JToggleButton dtbutton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JToggleButton listButton;
     private javax.swing.JToggleButton mkbutton;
     private javax.swing.JToggleButton mmbutton;
     // End of variables declaration//GEN-END:variables
