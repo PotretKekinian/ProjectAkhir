@@ -31,6 +31,10 @@ public class Motor {
         this.harga = harga;
     }
 
+    public Motor() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public String getMerk() {
         return merk;
     }

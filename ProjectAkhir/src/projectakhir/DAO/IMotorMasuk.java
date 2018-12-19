@@ -14,6 +14,7 @@ import projectakhirclass.Motor;
 public interface IMotorMasuk {
     public void insert (Motor m);
     public void update (Motor m);
+    public void select (Motor m);
     public void delete (int id);
     public List<Motor> getAll();
     public List<Motor> getCariTipe (String Tipe); 
