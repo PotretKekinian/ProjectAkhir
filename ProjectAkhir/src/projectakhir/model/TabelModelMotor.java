@@ -12,15 +12,15 @@ import projectakhirclass.Motor;
  * @author sin
  */
 public class TabelModelMotor extends AbstractTableModel{
-    List <Motor> lb;
+    List <Motor> lm;
     
-    public TabelModelMotor(List<Motor> lb){
-        this.lb = lb;
+    public TabelModelMotor(List<Motor> lm){
+        this.lm = lm;
     }
     
     @Override
     public int getRowCount(){
-        return lb.size();
+        return lm.size();
     }
     
     @Override
@@ -44,13 +44,13 @@ public class TabelModelMotor extends AbstractTableModel{
     @Override
     public Object getValueAt(int rowIndex, int columnIndex){
         switch (columnIndex){
-            case 0: return lb.get(rowIndex).getMerk();
-            case 1: return lb.get(rowIndex).getTipe();
-            case 2: return lb.get(rowIndex).getNopol();
-            case 3: return lb.get(rowIndex).getWarna();
-            case 4: return lb.get(rowIndex).getJt();
-            case 5: return lb.get(rowIndex).getTglmsk();
-            case 6: return lb.get(rowIndex).getHarga();
+            case 0: return lm.get(rowIndex).getMerk();
+            case 1: return lm.get(rowIndex).getTipe();
+            case 2: return lm.get(rowIndex).getNopol();
+            case 3: return lm.get(rowIndex).getWarna();
+            case 4: return lm.get(rowIndex).getJt();
+            case 5: return lm.get(rowIndex).getTglmsk();
+            case 6: return lm.get(rowIndex).getHarga();
             default: return null;
         }
     }
