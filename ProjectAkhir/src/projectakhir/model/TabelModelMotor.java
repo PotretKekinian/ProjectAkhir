@@ -6,7 +6,7 @@
 package projectakhir.model;
 import java.util.*;
 import javax.swing.table.AbstractTableModel;
-import projectakhirclass.Motor;
+import projectakhir.class1.Motor;
 /**
  *
  * @author sin

@@ -7,7 +7,7 @@ package projectakhir.model;
 
 import java.util.List;
 import javax.swing.table.AbstractTableModel;
-import projectakhirclass.transaksi;
+import projectakhir.class1.Transaksi;
 import java.util.*;
 
 /**
@@ -50,7 +50,7 @@ public class TabelModelTraksaksi extends AbstractTableModel {
         switch(columnIndex){
             case 0: return lt.get(rowIndex).getAlamat();
             case 1: return lt.get(rowIndex).getNoHp();
-            case 2: return lt.get(rowIndex).getInk();
+            case 2: return lt.get(rowIndex).getNik();
             case 3: return lt.get(rowIndex).getMerk();
             case 4: return lt.get(rowIndex).getTipe();
             case 5: return lt.get(rowIndex).getNopol();

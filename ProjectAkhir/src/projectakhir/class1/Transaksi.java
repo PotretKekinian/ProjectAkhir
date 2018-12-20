@@ -3,40 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package projectakhir.model;
-
-import java.util.ArrayList;
+package projectakhir.class1;
 
 /**
  *
- * @author Bahrudin<bahrudinrizky313@gmai.com>
+ * @author sin
  */
 public class Transaksi {
     private String nama;
     private String alamat;
     private int noHp;
     private int nik;
-    private int tglklr;
-    private String merk;
-    private String tipe;
-    private int nopol;
-    private String warna;
-    private String jt;
-    private int harga;
-
-    public Transaksi(String nama, String alamat, int noHp, int nik, int tglklr, String merk, String tipe, int nopol, String warna, String jt, int harga) {
-        this.nama = nama;
-        this.alamat = alamat;
-        this.noHp = noHp;
-        this.nik = nik;
-        this.tglklr = tglklr;
-        this.merk = merk;
-        this.tipe = tipe;
-        this.nopol = nopol;
-        this.warna = warna;
-        this.jt = jt;
-        this.harga = harga;
-    }
+    private String tglklr;
 
     public String getNama() {
         return nama;
@@ -70,11 +48,11 @@ public class Transaksi {
         this.nik = nik;
     }
 
-    public int getTglklr() {
+    public String getTglklr() {
         return tglklr;
     }
 
-    public void setTglklr(int tglklr) {
+    public void setTglklr(String tglklr) {
         this.tglklr = tglklr;
     }
 
@@ -94,11 +72,11 @@ public class Transaksi {
         this.tipe = tipe;
     }
 
-    public int getNopol() {
+    public String getNopol() {
         return nopol;
     }
 
-    public void setNopol(int nopol) {
+    public void setNopol(String nopol) {
         this.nopol = nopol;
     }
 
@@ -118,14 +96,41 @@ public class Transaksi {
         this.jt = jt;
     }
 
-    public int getHarga() {
+    public String getTglmsk() {
+        return tglmsk;
+    }
+
+    public void setTglmsk(String tglmsk) {
+        this.tglmsk = tglmsk;
+    }
+
+    public String getHarga() {
         return harga;
     }
 
-    public void setHarga(int harga) {
+    public void setHarga(String harga) {
         this.harga = harga;
     }
 
-    
-    
+    public Transaksi(String nama, String alamat, int noHp, int nik, String tglklr, String merk, String tipe, String nopol, String warna, String jt, String tglmsk, String harga) {
+        this.nama = nama;
+        this.alamat = alamat;
+        this.noHp = noHp;
+        this.nik = nik;
+        this.tglklr = tglklr;
+        this.merk = merk;
+        this.tipe = tipe;
+        this.nopol = nopol;
+        this.warna = warna;
+        this.jt = jt;
+        this.tglmsk = tglmsk;
+        this.harga = harga;
+    }
+    private String merk;
+    private String tipe;
+    private String nopol;
+    private String warna;
+    private String jt;
+    private String tglmsk;
+    private String harga;
 }

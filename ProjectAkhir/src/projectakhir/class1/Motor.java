@@ -3,40 +3,45 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package projectakhirclass;
-import java.util.Date;
+package projectakhir.class1;
 
 /**
  *
  * @author sin
  */
 public class Motor {
-   private String merk;
-   private String tipe;
-   private int nopol;
-   private String warna;
-   private String jt;
-   private Date tglmsk;
-   private Date tglklr;
-   private int harga;
+    private int id;
+    private String merk;
+    private String tipe;
+    private String nopol;
+    private String warna;
+    private String jt;
+    private String tglmsk;
+    private int harga;
 
-    public Motor(String merk, String tipe, int nopol, String warna, String jt, Date tglmsk, Date tglklr, int harga) {
+    public Motor(String merk, String tipe, String nopol, String warna, String jt, String tglmsk, int harga) {
         this.merk = merk;
         this.tipe = tipe;
         this.nopol = nopol;
         this.warna = warna;
         this.jt = jt;
         this.tglmsk = tglmsk;
-        this.tglklr = tglklr;
         this.harga = harga;
     }
 
     public Motor() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public String getMerk() {
         return merk;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public void setMerk(String merk) {
@@ -51,11 +56,11 @@ public class Motor {
         this.tipe = tipe;
     }
 
-    public int getNopol() {
+    public String getNopol() {
         return nopol;
     }
 
-    public void setNopol(int nopol) {
+    public void setNopol(String nopol) {
         this.nopol = nopol;
     }
 
@@ -75,20 +80,12 @@ public class Motor {
         this.jt = jt;
     }
 
-    public Date getTglmsk() {
+    public String getTglmsk() {
         return tglmsk;
     }
 
-    public void setTglmsk(Date tglmsk) {
+    public void setTglmsk(String tglmsk) {
         this.tglmsk = tglmsk;
-    }
-
-    public Date getTglklr() {
-        return tglklr;
-    }
-
-    public void setTglklr(Date tglklr) {
-        this.tglklr = tglklr;
     }
 
     public int getHarga() {
@@ -97,17 +94,7 @@ public class Motor {
 
     public void setHarga(int harga) {
         this.harga = harga;
-    }  
+    }
+
     
-    public String toString(){
-        return this.merk;
-    }
-
-    public Object getId() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public void setId(int aInt) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }

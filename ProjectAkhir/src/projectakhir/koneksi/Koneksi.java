@@ -8,15 +8,16 @@ import com.mysql.jdbc.jdbc2.optional.MysqlConnectionPoolDataSource;
 import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 import java.sql.*;
 import javax.swing.JOptionPane;
-
 /**
  *
  * @author sin
  */
 public class Koneksi {
-   static Connection con;
+    static Connection con;
+
     
     public static Connection Connection(){
+
         if (con==null){
         MysqlDataSource data = new MysqlConnectionPoolDataSource();
             data.setDatabaseName("potretkekinian");
@@ -24,8 +25,7 @@ public class Koneksi {
             data.setPassword("");
             try {
                 con=data.getConnection();
-            } catch (Exception e) {
-                e.printStackTrace();
+            } catch (SQLException e) {
             }
         }   
         return con;

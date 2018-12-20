@@ -99,11 +99,17 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Beli"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="beliButtonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="kembaliButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="kembali"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="kembaliButtonActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

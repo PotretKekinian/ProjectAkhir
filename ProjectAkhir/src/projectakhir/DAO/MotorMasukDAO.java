@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package projectakhir.DAO;
-
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
@@ -16,22 +15,19 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import projectakhir.koneksi.Koneksi;
-import projectakhirclass.Motor;
-
+import projectakhir.class1.Motor;
 /**
  *
  * @author sin
  */
-public abstract class MotorMasukDAO implements IMotorMasuk{
-
+public class MotorMasukDAO implements IMotorMasuk{
+ 
     public Connection con;
     
     String insert ="Insert Into motormasuk (merk, tipe, nopol, warna, jt, tglmsk, harga) VALUES (?,?,?,?,?,?,?);";
-    String update ="Update motormasuk set merk=?, tipe=?, nopol=?, warna=?, jt=?, tglmsk=?, harga=?;";
-    String delete ="Delete * From motormasuk where id_marang=? ;";
+    String delete ="Delete From motormasuk where id=? ;";
     String select ="Select * From motormasuk;";
-    String carinama ="Select * From motormasuk WHERE tipe like ?";
-
+    
     public MotorMasukDAO() {
         con=Koneksi.Connection();
     }
@@ -86,11 +82,11 @@ public abstract class MotorMasukDAO implements IMotorMasuk{
 
     @Override
     public void delete(int id) {
-       Statement st = null;
+       PreparedStatement st = null;
         try {
-           PreparedStatement Statement = con.prepareStatement(delete);
-           Statement.setInt(1, id);
-           Statement.executeUpdate();
+           st = con.prepareStatement(delete);
+           st.setInt(1, id);
+           st.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }finally{
@@ -112,13 +108,13 @@ public abstract class MotorMasukDAO implements IMotorMasuk{
             while (rs.next()) {
                 Motor m = new Motor();
                 m.setId(rs.getInt("id"));
-                m.setMerk(rs.getString("Merk"));
-                m.setTipe(rs.getString("Tipe"));
-                m.setNopol(rs.getString("NOPOL"));
-                m.setWarna(rs.getString("Warna"));
-                m.setJt(rs.getString("Jenis Transmisi"));
-                m.setTglmsk(rs.getString("Tanggal Masuk"));
-                m.setHarga(rs.getInt("Harga"));
+                m.setMerk(rs.getString("merk"));
+                m.setTipe(rs.getString("tipe"));
+                m.setNopol(rs.getString("nopol"));
+                m.setWarna(rs.getString("warna"));
+                m.setJt(rs.getString("jt"));
+                m.setTglmsk(rs.getString("tglmsk"));
+                m.setHarga(rs.getInt("harga"));
                 lm.add(m);
             }
         } catch (SQLException e) {

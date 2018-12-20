@@ -5,19 +5,36 @@
  */
 package projectakhir;
 
+import java.awt.HeadlessException;
+import java.util.List;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import projectakhir.DAO.IMotorMasuk;
+import projectakhir.DAO.MotorMasukDAO;
+import projectakhir.model.TabelModelMotor;
+import projectakhir.class1.Motor;
+
 /**
  *
  * @author Bahrudin<bahrudinrizky313@gmai.com>
  */
 public class ListMotor extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Coba
-     */
     public ListMotor() {
         initComponents();
+        isiTable();
     }
 
+    private void isiTable(){
+        IMotorMasuk iMotor = new MotorMasukDAO() {};
+        List<Motor> lm = iMotor.getAll();
+        TabelModelMotor tbModel = new TabelModelMotor(lm);
+        this.datamasukTableMM.setModel(tbModel);
+     }
+    
+     
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -60,8 +77,18 @@ public class ListMotor extends javax.swing.JFrame {
         jLabel1.setText("List Motor di Showroom PotretKekinian");
 
         beliButton.setText("Beli");
+        beliButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                beliButtonActionPerformed(evt);
+            }
+        });
 
         kembaliButton.setText("kembali");
+        kembaliButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kembaliButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -98,6 +125,17 @@ public class ListMotor extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void kembaliButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kembaliButtonActionPerformed
+        Data dt=new Data();
+        dt.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_kembaliButtonActionPerformed
+
+    private void beliButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_beliButtonActionPerformed
+        Transaksi ts=new Transaksi();
+        ts.setVisible(true);
+    }//GEN-LAST:event_beliButtonActionPerformed
 
     /**
      * @param args the command line arguments

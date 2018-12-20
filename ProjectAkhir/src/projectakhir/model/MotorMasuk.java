@@ -12,7 +12,7 @@ import java.util.Date;
  * @author sin
  */
 public class MotorMasuk {
-    private String merk;
+   private String merk;
    private String tipe;
    private int nopol;
    private String warna;

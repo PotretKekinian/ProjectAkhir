@@ -128,18 +128,13 @@ public class Data extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void mmbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mmbuttonActionPerformed
-       MotorMasuk motor = null;
-        try {
-            motor = new MotorMasuk();
-        } catch (SQLException ex) {
-            Logger.getLogger(Data.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        motor.setVisible(true);
+       MotorMasuk mtr = new MotorMasuk();
+       mtr.setVisible(true);
     }//GEN-LAST:event_mmbuttonActionPerformed
 
     private void mkbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mkbuttonActionPerformed
-        MotorKeluar motor=new MotorKeluar();
-        motor.setVisible(true);
+        MotorKeluar mtr=new MotorKeluar();
+        mtr.setVisible(true);
     }//GEN-LAST:event_mkbuttonActionPerformed
 
     private void dtbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dtbuttonActionPerformed

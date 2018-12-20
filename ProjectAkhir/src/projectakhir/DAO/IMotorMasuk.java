@@ -5,7 +5,8 @@
  */
 package projectakhir.DAO;
 import java.util.*;
-import projectakhirclass.Motor;
+import projectakhir.class1.Motor;
+
 /**
  *
  * @author sin

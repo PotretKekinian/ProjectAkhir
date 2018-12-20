@@ -17,36 +17,33 @@ import javax.swing.JOptionPane;
  * @author sin
  */
 public class LoginAdmin extends javax.swing.JFrame {
-    Koneksi kn;
+    Connection con;
+    
     public LoginAdmin() {
-        kn = new Koneksi();
-        kn.Class();
-        this.setLocationRelativeTo(null);
         initComponents();
+        con=Koneksi.Connection();
+        Masuk();
+        
     }
+    
     private void Masuk(){
         try {
-            String username = usernameField.getText();
-            String password = PasswordField.getText();
-            kn.st = kn.con.createStatement();
-            String sql = "select * from login where = '"+username+"' Dan Password ='"+password+"'";
-            kn.rs = kn.st.executeQuery(sql);
-        if (kn.rs.next()){
-            if(PasswordField.getText().equals(kn.rs.getString("password"))){
-                new Data().show();
-                this.dispose();
-            }else{
-                JOptionPane.showMessageDialog(rootPane,"Password yang dimasukkan salah!!!");
-                PasswordField.setText("");
-                PasswordField.requestFocus();
+            Statement st = con.createStatement();
+            String sql = "select * from login where username='"+usernameField.getText()+"' And Password ='"+PasswordField.getText()+"'";
+            ResultSet rs = st.executeQuery(sql);
+        if (rs.next()){
+            if(usernameField.getText().equals(rs.getString("username"))&& PasswordField.getText().equals(rs.getString("password"))){
+                JOptionPane.showMessageDialog(null,"Berhasil Login!!!");
+                new LoginAdmin().setVisible(true);
+                this.setVisible(false);
             }
         }else{
-            JOptionPane.showMessageDialog(null, "Login gagal!!!");
-        }
-        } catch (SQLException e){
-            JOptionPane.showMessageDialog(null, e);
-        }
-        }
+                JOptionPane.showMessageDialog(null,"Password yang dimasukkan salah!!!");
+            }
+        } catch (Exception e){
+            JOptionPane.showMessageDialog(this,e.getMessage());
+    } 
+    }
 
     
     /**
