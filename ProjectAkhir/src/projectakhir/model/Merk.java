@@ -10,5 +10,5 @@ package projectakhir.model;
  * @author Bahrudin<bahrudinrizky313@gmai.com>
  */
 class Merk {
-    dscscds
+    
 }
