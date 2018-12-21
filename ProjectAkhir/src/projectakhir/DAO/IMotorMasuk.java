@@ -14,7 +14,6 @@ import projectakhir.class1.Motor;
 
 public interface IMotorMasuk {
     public void insert (Motor m);
-    public void update (Motor m);
     public void delete (int id);
     public List<Motor> getAll();
 }

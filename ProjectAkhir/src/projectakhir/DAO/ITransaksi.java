@@ -6,15 +6,15 @@
 package projectakhir.DAO;
 
 import java.util.List;
-import projectakhir.class1.Motor;
+import projectakhir.class1.Transaksi;
 
 /**
  *
  * @author Bahrudin<bahrudinrizky313@gmai.com>
  */
 public interface ITransaksi {
-     public void insert (Motor m);
-    public void update (Motor m);
+    public void insert (Transaksi ts);
+    public void update (Transaksi ts);
     public void delete (int id);
-    public List<Motor> getAll();
+    public List<Transaksi> getAll();
 }

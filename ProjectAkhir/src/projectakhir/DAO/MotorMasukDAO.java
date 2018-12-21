@@ -58,29 +58,6 @@ public class MotorMasukDAO implements IMotorMasuk{
     }
 
     @Override
-    public void update(Motor m) {
-       PreparedStatement st = null;
-        try {
-            st=con.prepareStatement(insert);
-            st.setString(1, m.getMerk());
-            st.setString(2, m.getTipe());
-            st.setString(3, m.getNopol());
-            st.setString(4, m.getWarna());
-            st.setString(5, m.getJt());
-            st.setString(6, m.getTglmsk());
-            st.setInt(7, m.getHarga());
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }finally{
-            try {
-                st.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
-    @Override
     public void delete(int id) {
        PreparedStatement st = null;
         try {
