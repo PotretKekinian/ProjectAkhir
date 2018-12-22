@@ -36,10 +36,10 @@ public class MotorMasuk extends javax.swing.JFrame {
         dao= new MotorMasukDAO() {};
         isiTahun();
         isiTanggal();
-        isiTable();
+        isiTabel();
     }
     
-     private void isiTable(){
+     private void isiTabel(){
         IMotorMasuk iMotor = new MotorMasukDAO() {};
         List<Motor> lm = iMotor.getAll();
         TabelModelMotor tbModel = new TabelModelMotor(lm);
@@ -107,7 +107,8 @@ public class MotorMasuk extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         datamasukTableMM = new javax.swing.JTable();
         jLabel6 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
+        gambarLabel = new javax.swing.JLabel();
+        resetButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -213,7 +214,14 @@ public class MotorMasuk extends javax.swing.JFrame {
 
         jLabel6.setText("Tanggal Masuk");
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/motor.png"))); // NOI18N
+        gambarLabel.setIcon(new javax.swing.ImageIcon("C:\\Users\\sin\\Documents\\NetBeansProjects\\ProjectAkhir\\ProjectAkhir\\src\\images\\motor.png")); // NOI18N
+
+        resetButton.setText("Reset");
+        resetButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                resetButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -243,27 +251,26 @@ public class MotorMasuk extends javax.swing.JFrame {
                         .addComponent(bulanComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(tahunComboBox, 0, 1, Short.MAX_VALUE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 558, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel9)
+                        .addGap(224, 224, 224))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(155, 155, 155)
                         .addComponent(daftarMMButton, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(resetButton, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(deleteButton, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(kembaliMMButton, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 558, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap())
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jLabel9)
-                                .addGap(224, 224, 224))))))
+                        .addContainerGap())))
             .addGroup(layout.createSequentialGroup()
                 .addGap(226, 226, 226)
-                .addComponent(jLabel10)
+                .addComponent(gambarLabel)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
@@ -274,7 +281,7 @@ public class MotorMasuk extends javax.swing.JFrame {
                 .addGap(14, 14, 14)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel10))
+                    .addComponent(gambarLabel))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
@@ -309,7 +316,8 @@ public class MotorMasuk extends javax.swing.JFrame {
                     .addComponent(jLabel6)
                     .addComponent(daftarMMButton)
                     .addComponent(kembaliMMButton)
-                    .addComponent(deleteButton))
+                    .addComponent(deleteButton)
+                    .addComponent(resetButton))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel7)
@@ -341,7 +349,7 @@ public class MotorMasuk extends javax.swing.JFrame {
     private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteButtonActionPerformed
         String id = datamasukTableMM.getModel().getValueAt(datamasukTableMM.getSelectedRow(), 0).toString();
         dao.delete(new Integer(id));
-        isiTable();
+        isiTabel();
     }//GEN-LAST:event_deleteButtonActionPerformed
 
     private void merkMMComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_merkMMComboBoxActionPerformed
@@ -362,9 +370,13 @@ public class MotorMasuk extends javax.swing.JFrame {
         mtr.setTglmsk(getTgl());
         mtr.setHarga(Integer.parseInt(hargaMMField.getText()));
         dao.insert(mtr);
-        isiTable();
+        isiTabel();
 
     }//GEN-LAST:event_daftarMMButtonActionPerformed
+
+    private void resetButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetButtonActionPerformed
+        
+    }//GEN-LAST:event_resetButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -406,9 +418,9 @@ public class MotorMasuk extends javax.swing.JFrame {
     private javax.swing.JButton daftarMMButton;
     private javax.swing.JTable datamasukTableMM;
     private javax.swing.JToggleButton deleteButton;
+    private javax.swing.JLabel gambarLabel;
     private javax.swing.JTextField hargaMMField;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -422,6 +434,7 @@ public class MotorMasuk extends javax.swing.JFrame {
     private javax.swing.JButton kembaliMMButton;
     private javax.swing.JComboBox<String> merkMMComboBox;
     private javax.swing.JTextField nopolMMField;
+    private javax.swing.JButton resetButton;
     private javax.swing.JComboBox<String> tahunComboBox;
     private javax.swing.JComboBox<String> tglComboBox;
     private javax.swing.JTextField tipeMMField;

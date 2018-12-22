@@ -64,7 +64,7 @@ public class LoginAdmin extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel3.setText("LOGIN ");
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/user.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\sin\\Documents\\NetBeansProjects\\ProjectAkhir\\ProjectAkhir\\src\\images\\user.png")); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -104,7 +104,6 @@ public class LoginAdmin extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jLabel3)
                         .addGap(9, 9, 9)))
-                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(usernameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -129,7 +128,8 @@ public class LoginAdmin extends javax.swing.JFrame {
         if (rs.next()){
             if(usernameField.getText().equals(rs.getString("username"))&& passwordField.getText().equals(rs.getString("password"))){
                 JOptionPane.showMessageDialog(null,"Berhasil Login!!!");
-                new Data().setVisible(true);
+                Data dt=new Data();
+                dt.setVisible(true);
                 this.setVisible(false);
             }
         }else{

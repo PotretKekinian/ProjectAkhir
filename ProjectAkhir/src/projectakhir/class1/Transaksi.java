@@ -25,10 +25,10 @@ public class Transaksi {
         this.nik = nik;
         this.tglklr = tglklr;
     }
-    
+
     public Transaksi() {
     }
-    
+
     public int getId() {
         return id;
     }
@@ -77,4 +77,5 @@ public class Transaksi {
         this.tglklr = tglklr;
     }
 
+    
 }

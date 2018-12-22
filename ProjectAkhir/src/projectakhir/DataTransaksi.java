@@ -5,19 +5,88 @@
  */
 package projectakhir;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.sql.SQLException;
+import java.util.Calendar;
+import javax.swing.JOptionPane;
+import java.util.Date;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import static javax.management.Query.lt;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+import projectakhir.DAO.IMotorMasuk;
+import projectakhir.DAO.ITransaksi;
+import projectakhir.DAO.MotorMasukDAO;
+import projectakhir.DAO.TransaksiDAO;
+import projectakhir.class1.Motor;
+import projectakhir.class1.Transaksi;
+import projectakhir.koneksi.Koneksi;
+import projectakhir.model.TabelModelMotor;
+import projectakhir.model.TabelModelTraksaksi;
 /**
  *
  * @author sin
  */
-public class Transaksi extends javax.swing.JFrame {
+public class DataTransaksi extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Transaksi
-     */
-    public Transaksi() {
+    TransaksiDAO dao;
+    public DataTransaksi() {
         initComponents();
+        dao= new TransaksiDAO() {};
+        isiTahun();
+        isiTanggal();
+        isiTable();
+        isiTabel();
     }
-
+    
+     private void isiTable(){
+        ITransaksi iTransaksi = new TransaksiDAO() {};
+        List<Transaksi> lm = iTransaksi.getAll();
+        TabelModelTraksaksi tbModel = new TabelModelTraksaksi(lm);
+        this.datatransaksiTableTRAN.setModel(tbModel);
+     }
+     
+      private void isiTabel(){
+        IMotorMasuk iMotor = new MotorMasukDAO() {};
+        List<Motor> lm = iMotor.getAll();
+        TabelModelMotor tbModel = new TabelModelMotor(lm);
+        this.datatransaksiTableTRAN.setModel(tbModel);
+     }
+    public String getTgl(){
+        int dd = Integer.parseInt(tglComboBox.getSelectedItem().toString());
+        int mm = bulanComboBox.getSelectedIndex()+1;
+        int yy = Integer.parseInt(tahunComboBox.getSelectedItem().toString());
+        String tgl = yy+"/"+mm+"/"+dd;
+        return tgl;
+    }
+  
+    private void isiTahun(){
+        Calendar cal = Calendar.getInstance();
+        int awal = cal.get(cal.YEAR);
+        Integer[] isi = new Integer[60];
+        for (int i = 0; i < isi.length; i++) {
+            isi[i]=awal-i;
+        }
+        DefaultComboBoxModel cbtahunModel = new DefaultComboBoxModel(isi);
+        tahunComboBox.setModel(cbtahunModel);
+    }
+    
+    private void isiTanggal(){
+        int tgl=1;
+        Integer[] isi = new Integer[31];
+        for (int i = 0; i < 31; i++) {
+            isi[i]=tgl;
+            tgl++;
+        }
+        DefaultComboBoxModel cbtglModel = new DefaultComboBoxModel(isi);
+        tglComboBox.setModel(cbtglModel);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -53,8 +122,10 @@ public class Transaksi extends javax.swing.JFrame {
         nikTRANField = new javax.swing.JTextField();
         kembaliTRANButton = new javax.swing.JButton();
         jLabel16 = new javax.swing.JLabel();
-        tglklrTRANField = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
+        tglComboBox = new javax.swing.JComboBox<>();
+        bulanComboBox = new javax.swing.JComboBox<>();
+        tahunComboBox = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -74,6 +145,11 @@ public class Transaksi extends javax.swing.JFrame {
         });
 
         okTRANButton.setText("OK");
+        okTRANButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                okTRANButtonActionPerformed(evt);
+            }
+        });
 
         warnaTRANField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -141,7 +217,13 @@ public class Transaksi extends javax.swing.JFrame {
 
         jLabel16.setText("Tanggal Beli");
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/transaksi.png"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon("C:\\Users\\sin\\Documents\\NetBeansProjects\\ProjectAkhir\\ProjectAkhir\\src\\images\\transaksi.png")); // NOI18N
+
+        tglComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        bulanComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "Oktober", "November", "Desember" }));
+
+        tahunComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -152,10 +234,6 @@ public class Transaksi extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel16)
-                                .addGap(18, 18, 18)
-                                .addComponent(tglklrTRANField))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel13)
@@ -166,11 +244,19 @@ public class Transaksi extends javax.swing.JFrame {
                                     .addComponent(nikTRANField)
                                     .addComponent(nohpTRANField, javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(alamatTRANField)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel12)
-                                .addGap(48, 48, 48)
-                                .addComponent(namaTRANField, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE)))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(jLabel16)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(tglComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(bulanComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(tahunComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(jLabel12)
+                                    .addGap(48, 48, 48)
+                                    .addComponent(namaTRANField, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(63, 63, 63)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
@@ -217,9 +303,9 @@ public class Transaksi extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(34, 34, 34)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -241,8 +327,11 @@ public class Transaksi extends javax.swing.JFrame {
                             .addComponent(jLabel15)
                             .addComponent(nikTRANField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(tglklrTRANField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(tglComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(bulanComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(tahunComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel16)))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -300,6 +389,17 @@ public class Transaksi extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_warnaTRANFieldActionPerformed
 
+    private void okTRANButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_okTRANButtonActionPerformed
+        Transaksi ts = new Transaksi();
+        ts.setNama(namaTRANField.getText());
+        ts.setAlamat(alamatTRANField.getText());
+        ts.setNoHp(Integer.parseInt(nohpTRANField.getText()));
+        ts.setNik(Integer.parseInt(nikTRANField.getText()));
+        ts.setTglklr(getTgl());
+        dao.insert(ts);
+        isiTable();
+    }//GEN-LAST:event_okTRANButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -331,13 +431,14 @@ public class Transaksi extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Transaksi().setVisible(true);
+                new DataTransaksi().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField alamatTRANField;
+    private javax.swing.JComboBox<String> bulanComboBox;
     private javax.swing.JTable datatransaksiTableTRAN;
     private javax.swing.JTextField hargaTRANField;
     private javax.swing.JLabel jLabel1;
@@ -362,7 +463,8 @@ public class Transaksi extends javax.swing.JFrame {
     private javax.swing.JTextField nopolTRANField;
     private javax.swing.JButton okTRANButton;
     private javax.swing.JComboBox<String> pilihanTRANComboBox;
-    private javax.swing.JTextField tglklrTRANField;
+    private javax.swing.JComboBox<String> tahunComboBox;
+    private javax.swing.JComboBox<String> tglComboBox;
     private javax.swing.JTextField tipeTRANField;
     private javax.swing.JTextField warnaTRANField;
     // End of variables declaration//GEN-END:variables

@@ -68,7 +68,6 @@
                       <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="usernameField" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -119,7 +118,7 @@
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/images/user.png"/>
+          <Image iconType="2" name="C:\Users\sin\Documents\NetBeansProjects\ProjectAkhir\ProjectAkhir\src\images\user.png"/>
         </Property>
       </Properties>
     </Component>

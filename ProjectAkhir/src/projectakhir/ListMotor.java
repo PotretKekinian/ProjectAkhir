@@ -91,7 +91,7 @@ public class ListMotor extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/motor.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\sin\\Documents\\NetBeansProjects\\ProjectAkhir\\ProjectAkhir\\src\\images\\motor.png")); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -141,7 +141,7 @@ public class ListMotor extends javax.swing.JFrame {
     }//GEN-LAST:event_kembaliButtonActionPerformed
 
     private void beliButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_beliButtonActionPerformed
-        Transaksi ts=new Transaksi();
+        DataTransaksi ts=new DataTransaksi();
         ts.setVisible(true);
     }//GEN-LAST:event_beliButtonActionPerformed
 
